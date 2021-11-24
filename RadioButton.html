@@ -1,0 +1,120 @@
+<!-- A very simple program to illustrate the use of the radiobutton -->
+<!-- The radiobutton will be controlled by Javascript -->
+<!---->
+<!---->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>SDG Radio Button Test</title>
+
+    <style>
+
+        body {
+            font-size: 28px;
+            background-color: paleturquoise;
+        }
+
+        .bar{
+          width: 50px;
+          height: 10px;
+          border: 2px solid #fff;
+          margin: 6px;
+          cursor: pointer;
+          transition: 0.4s;
+          
+        }
+
+        .bar:hover{
+          background: #fff;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+
+        function changeSrc() {
+
+            if (document.getElementById("r0").checked) {
+                console.log("load pic #0");
+                document.getElementById("picture").src = "UNSDG.jpg";
+                document.getElementById("picture").width = "500";
+                document.getElementById("picture").height = "500";
+
+            } else if (document.getElementById("r1").checked) {
+                console.log("load pic #1");
+                document.getElementById("picture").src = "goal1.png";
+                document.getElementById("picture").width = "500";
+                document.getElementById("picture").height = "500";
+
+            } else if (document.getElementById("r2").checked) {
+                console.log("load pic #2");
+                document.getElementById("picture").src = "goal2.png";
+                document.getElementById("picture").width = "500";
+                document.getElementById("picture").height = "500";
+            
+            } else if (document.getElementById("r3").checked) {
+                console.log("load pic #3");
+                document.getElementById("picture").src = "goal3.png";
+                document.getElementById("picture").width = "500";
+                document.getElementById("picture").height = "500";
+
+            } else if (document.getElementById("r4").checked) {
+                console.log("load pic #4");
+                document.getElementById("picture").src = "goal4.png";
+                document.getElementById("picture").width = "500";
+                document.getElementById("picture").height = "500";
+
+            } else if (document.getElementById("r5").checked) {
+                console.log("load pic #5");
+                document.getElementById("picture").src = "goal5.png";
+                document.getElementById("picture").width = "500";
+                document.getElementById("picture").height = "500";
+            }
+
+        } // end of function
+
+    </script>
+
+    <table style="width:100%">
+        
+        <tr>
+          <td><img id = "picture0" src="UNSDG.jpg" style="width:500px;height:500px;"></td>
+          <td><img id = "picture" src="UNSDG.jpg" style="width:500px;height:500px;"></td>
+        </tr>
+        
+    </table>
+
+    <form action="">
+
+    <label> Take a look! </label><br>
+
+      <input type="radio" id="r0" name="r" value="r0" onClick="changeSrc()" checked>  
+      <label for="r0" class="bar"> UNSDGs </label>
+    
+      <input type="radio" id="r1" name="r" value="r1" onClick="changeSrc()">
+      <label for="r1" class="bar"> Goal 1 </label>
+    
+      <input type="radio" id="r2" name="r" value="r2" onClick="changeSrc()">  
+      <label for="r2" class="bar"> Goal 2 </label>
+    
+      <input type="radio" id="r3" name="r" value="r3" onClick="changeSrc()">  
+      <label for="r3" class="bar"> Goal 3 </label>
+
+      <input type="radio" id="r4" name="r" value="r4" onClick="changeSrc()">  
+      <label for="r4" class="bar"> Goal 4 </label>
+
+      <input type="radio" id="r5" name="r" value="r5" onClick="changeSrc()">  
+      <label for="r5" class="bar"> Goal 5 </label>
+      <br>  
+
+    </form>
+
+ </body>     
+   
+</html>

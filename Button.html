@@ -1,0 +1,100 @@
+<html>    
+
+  <head>
+      <!-- STYLE TAGS must be placed within the HEAD SECTION of the file -->
+      <style>
+
+          body {
+            background-color: coral; /* place comments betwwen these markers */
+            /* background-image: url("test1.jpg"); */
+            /* background-position: center; */
+            /* background-repeat: no-repeat; */
+            /* background-size: 150%; */
+          }
+
+          .button {
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.1s;
+            cursor: pointer;
+          }
+
+          .button1 {
+            background-color: white; 
+            color: red; 
+            border: 2px solid #4CAF50;
+            padding: 15px 35px;
+          }
+
+          .button2 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #008CBA;
+            padding: 15px 35px;
+          }
+
+          .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+          }
+
+          .button2:hover {
+            background-color: #008CBA;
+            color: white;
+          }
+
+
+          h1.option1 {
+            border: 3px solid white;
+            padding: 10px; /* This the space between the text and the red border */
+            border-bottom-left-radius: 25px;
+          }
+
+          h1.option2 {
+            border: 3px solid orange;
+            padding: 10px; /* This the space between the text and the orange border */
+            border-bottom-left-radius: 25px;
+          }
+
+      </style>  
+
+      <script>
+
+        function loadData1(){
+          document.getElementById("image").src = "test1.jpg";
+          document.getElementById("image").width = 850
+          document.getElementById("image").height = 600
+          console.log("image1 loaded successfully")
+        }
+
+        function loadData2(){
+          document.getElementById("image").src = "test2.jpg";
+          document.getElementById("image").width = 850
+          document.getElementById("image").height = 600
+          console.log("image2 loaded successfully")
+        }
+
+      </script>
+       
+   </head>
+   
+    <body>
+
+        <h1 class = "option1"> Welcome to my SDG page! </h1>
+
+        <p> You will need to have two images "test1.jpg" and "test2.jpg" saved to the same folder!</p>
+
+        <button onclick = loadData1(); class = "button button1"> Image 1 </button>
+
+        <button onclick = loadData2(); class = "button button2"> Image 2 </button> 
+
+        <div></div>
+
+        <img id = "image" src=""/>
+
+    </body>
+
+</html>
